@@ -14,6 +14,7 @@
 * Git
 
   * [通过 git fsck --lost-found 恢复 git reset --hard 删除的文件](git/use-git-fsck-lost-found-recovery.md)
+  * [Git 项目防止提交 .DS_Store 到项目和清理已提交文件](git/git-ignore-and-reove-ds-store.md)
 
 * 工具
 
