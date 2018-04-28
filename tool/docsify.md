@@ -120,7 +120,7 @@
 
 进入首页首先进入一个封面，让你的笔记像一本书， 修改  `_coverpage.md` 即可。
 
-```html
+```markdown
 ![logo](_media/logo.png)
 
 # The book of Xiangmin Liu <small>1.0.0</small>

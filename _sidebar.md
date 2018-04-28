@@ -6,6 +6,8 @@
 
   * [PHP 服务端渲染 VUE 之 php-v8js 扩展](php/php-vue-v8js.md)
   * [PHP 处理浮点数高精度计算函数 Binary Calculator 用于金额计算](php/binary-calculator-func.md)
+  *  [Facebook Thrift 跨语言 Rpc 框架在 PHP 中的应用实战](mysql/batch-modify-mysql-table-name-prefix.md)
+  * [Laravel 中间件实现方式之管道模式 Pipeline 解析及设计优化](php/laravel-middleware-pipeline.md)
 
 * Mysql
 
