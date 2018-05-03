@@ -21,6 +21,7 @@
 * Linux
 
   * [Linux 查看服务与进程状态](linux/service-status.md)
+  * [Nginx日志分析命令](linux/nginx-log.md)
 
 * 前端
 
