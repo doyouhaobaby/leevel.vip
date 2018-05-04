@@ -43,6 +43,14 @@ service –status-all
 service mysql status
 ```
 
+### 启动重启和关闭
+
+```
+service mysql start
+service mysql restart
+service mysql stop
+```
+
 ## 参考文章
 * [小何讲进程： Linux进程的基本概念](https://blog.csdn.net/rl529014/article/details/51280018)
 * [linux的守护进程与服务-概念](https://blog.csdn.net/breeze_life/article/details/9409243)
