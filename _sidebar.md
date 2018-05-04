@@ -22,6 +22,9 @@
 
   * [Linux 查看服务与进程状态](linux/service-status.md)
   * [Nginx日志分析命令](linux/nginx-log.md)
+  * [Linux 开机关机重启命令](linux/shutdown.md)
+  * [Mac 下面使用 Termius 来管理 Linux 服务器](linux/termius.md)
+  * [Linux 文件基本属性](linux/file_base_property.md)
 
 * 前端
 
