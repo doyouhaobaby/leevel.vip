@@ -8,6 +8,7 @@
   * [PHP 处理浮点数高精度计算函数 Binary Calculator 用于金额计算](php/binary-calculator-func.md)
   *  [Facebook Thrift 跨语言 Rpc 框架在 PHP 中的应用实战](mysql/batch-modify-mysql-table-name-prefix.md)
   * [Laravel 中间件实现方式之管道模式 Pipeline 解析及设计优化](php/laravel-middleware-pipeline.md)
+  * [基于Zephir构建快速的PHP扩展框架或组件](php/the-right-way-to-zephir.md)
 
 * Mysql
 
