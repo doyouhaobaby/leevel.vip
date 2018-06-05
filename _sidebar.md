@@ -1,36 +1,20 @@
-* 序言
+* preface
 
-  * [关于我](about-me.md)
+  * [序言](index.md)
 
-* PHP
+* template
 
-  * [PHP 服务端渲染 VUE 之 php-v8js 扩展](php/php-vue-v8js.md)
-  * [PHP 处理浮点数高精度计算函数 Binary Calculator 用于金额计算](php/binary-calculator-func.md)
-  *  [Facebook Thrift 跨语言 Rpc 框架在 PHP 中的应用实战](mysql/batch-modify-mysql-table-name-prefix.md)
-  * [Laravel 中间件实现方式之管道模式 Pipeline 解析及设计优化](php/laravel-middleware-pipeline.md)
-  * [基于Zephir构建快速的PHP扩展框架或组件](php/the-right-way-to-zephir.md)
-
-* Mysql
-
-  * [Mysql 批量修改数据表前缀](mysql/batch-modify-mysql-table-name-prefix.md)
-
-* Git
-
-  * [通过 git fsck --lost-found 恢复 git reset --hard 删除的文件](git/use-git-fsck-lost-found-recovery.md)
-  * [Git 项目防止提交 .DS_Store 到项目和清理已提交文件](git/git-ignore-and-reove-ds-store.md)
-
-* Linux
-
-  * [Linux 查看服务与进程状态](linux/service-status.md)
-  * [Nginx日志分析命令](linux/nginx-log.md)
-  * [Linux 开机关机重启命令](linux/shutdown.md)
-  * [Mac 下面使用 Termius 来管理 Linux 服务器](linux/termius.md)
-  * [Linux 文件基本属性](linux/file_base_property.md)
-
-* 前端
-
-  * [Discuz CSS 属性书写顺序规范](frontend/discuz-css.md)
-
-* 工具
-
-  * [Docsify 非常优秀的 Markdown 文档阅读工具](tool/docsify.md)
+  * [模板](template/index.md)
+  * [变量](template/var.md)
+  * [变量赋值](template/assign.md)
+  * [快捷标签](template/quick.md)
+  * [流程控制](template/if.md)
+  * [For 循环](template/for.md)
+  * [List 循环](template/list.md)
+  * [Lists 循环](template/lists.md)
+  * [While 循环](template/while.md)
+  * [跳出循环](template/break.md)
+  * [PHP 标签](template/while.md)
+  * [Include 标签](template/include.md)
+  * [CSS 标签](template/css.md)
+  * [Tagself 保护标签](template/tagself.md)

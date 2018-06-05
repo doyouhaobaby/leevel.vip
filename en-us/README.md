@@ -1,7 +1,7 @@
 ## HOME
 
-> Welcome to my world.
+> Welcome to this site.
 
 ## What here
 
-This is my notebook.
+This is the documentation for QueryPHP.
