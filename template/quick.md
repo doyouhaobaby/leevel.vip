@@ -56,7 +56,7 @@ Make QueryPHP greater !
 模板编译后的结果：
 
 ``` php
-<?php echo 'Hello QueryPHP!'; ?>
+<?php echo 'Hello QueryPHP!';?>
 ```
 
 运行结果如下：
