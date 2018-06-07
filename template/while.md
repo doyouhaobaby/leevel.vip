@@ -17,11 +17,11 @@ QueryPHP 支持  while 语法标签，通过这种方式可以很好地将 PHP �
 模板编译后的结果：
 
 ``` php
-<?php $i = 10; ?>
-<?php while( $i>0 ) : ?>   
-    <?php echo $i; ?>Hello QueryPHP !<br>   
-    <?php $i--; ?>   
-<?php endwhile; ?>
+<?php $i = 10;?>
+<?php while ($i>0):?>
+    <?php echo $i;?>Hello QueryPHP !<br>
+    <?php $i--;?>
+<?php endwhile;?>
 ```
 
 ## node
@@ -39,9 +39,9 @@ QueryPHP 支持  while 语法标签，通过这种方式可以很好地将 PHP �
 模板编译后的结果：
 
 ``` php
-<?php $i = 10; ?>
-<?php while( $i>0 ) : ?>   
-    <?php echo $i; ?>Hello QueryPHP !<br>   
-    <?php $i--; ?>   
-<?php endwhile; ?>
+<?php $i = 10;?>
+<?php while($i > 0):?>
+    <?php echo $i;?>Hello QueryPHP !<br>
+    <?php $i--;?>
+<?php endwhile;?>
 ```

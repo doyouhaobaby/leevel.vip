@@ -19,6 +19,13 @@ var hello = 'world';
 模板编译后的结果：
 
 ``` php
-<script type="text/javascript"> var hello = 'world'; </script>
-<style type="text/css"> .red { color: red; } </style>
+<script type="text/javascript">
+var hello = 'world';
+</script>
+
+<style type="text/css">
+.red {
+    color: red;
+}
+{/stle}
 ```

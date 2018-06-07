@@ -19,13 +19,13 @@
 模板编译后的结果：
 
 ``` html
-<if condition="$name eq 1 "> value1      
-      <elseif condition="$name eq 2" />value2      
-      <else /> value3      
-   </if>      
-  
-{{i + 1}} 
-{$value}
+<if condition="$name eq 1 "> value1
+      <elseif condition="$name eq 2" />value2
+      <else /> value3
+   </if>
+
+{{i + 1}}
+     {$value}
 ```
 
-<p class="tip">上面的 **if 标签**被 **tagself** 标签包含，因此 **if标签** 里面的内容并不会被模板引擎解析，而是保持原样输出。</p>
+<p class="tip">上面的 **if 标签**被 **tagself** 标签包含，因此 **if 标签** 里面的内容并不会被模板引擎解析，而是保持原样输出。</p>
