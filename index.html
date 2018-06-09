@@ -165,13 +165,10 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            var url = 'https://github.com/hunzhiwange/notebook/blob/master/' + vm.route.file
+            var url = 'https://github.com/hunzhiwange/leevel.vip/blob/master/' + vm.route.file
             var editHtml = '[:memo: Edit Document](' + url + ')\n'
 
-            return editHtml
-              + html
-              + '\n\n----\n\n'
-              + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+            return editHtml + html
           })
         }
       ]

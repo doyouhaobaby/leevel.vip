@@ -55,3 +55,67 @@
     QueryPHP for <br>
 <?php endfor;?>
 ```
+
+## JS 风格版
+
+最终生成一个 foreach 结果，简单的循环。
+
+### 例 1：
+
+HTML
+
+```
+{% for item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+{% /for %}
+```
+
+模板编译后的结果：
+
+``` php
+<?php foreach ($navigation as $key => $item):?>
+    <li><a href="<?php echo $item->href;?>"><?php echo $item->caption;?></a></li>
+<?php endforeach;?>
+```
+
+> 注意：“{%” 与内容之间可以有空格,也可以没有，结果一样。
+
+### 例 2：
+
+可以使用逗号分割建和值，逗号连接不能有空格。
+
+HTML
+
+```
+{% for mykey,item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+{% /for %}
+```
+
+模板编译后的结果：
+
+``` php
+<?php foreach ($navigation as $mykey => $item):?>
+    <li><a href="<?php echo $item->href;?>"><?php echo $item->caption;?></a></li>
+<?php endforeach;?>
+```
+
+### 例 3：
+
+可以使用空格分割建和值。
+
+HTML
+
+```
+{% for mykey item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+{% /for %}
+```
+
+模板编译后的结果：
+
+``` php
+<?php foreach ($navigation as $mykey => $item):?>
+    <li><a href="<?php echo $item->href;?>"><?php echo $item->caption;?></a></li>
+<?php endforeach;?>
+```

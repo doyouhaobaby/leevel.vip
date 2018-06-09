@@ -13,40 +13,28 @@
 下面我们测试一下子，首先我们在主模板文件中写入如下的代码：
 
 ``` html
-<include file="app/home/theme/default/header.html"> 
+<include file="application/app/ui/theme/default/header.html">
 ```
 
 模板编译后的结果：
 
 ``` php
-<?php $this->display( 'app/home/theme/default/header.html' ); ?>
+<?php $this->display('application/app/ui/theme/default/header', [], '.html', true);?>
 ```
-
-我们需要定义一个 header.html ，如果没有定义就会在页面上收到一个异常提示：
-
-<p class="tip">模板文件 app/home/theme/default/header.html 不存在</p>
 
 ## 使用变量定义完整的文件
 
 ``` html
-{~$sHeadTpl = $APP->apptheme_path.'/'.$APP->apptheme_name.'/header.html' }   
-<include file="$sHeadTpl">
-```
-
-**$APP** 为系统提供的当前 APP 实例，这里可以读取当前模板路径地址，比如我开发的环境下，**$sHeadTpl** 的路径为：
-
-``` html
-{项目地址}/app/home/theme/default/header.html
+{~$headTpl = app()->pathApplicationTheme() . '/' . '/header.html'}
+<include file="$headTpl">
 ```
 
 模板编译后的结果：
 
 ``` php
-<?php $sHeadTpl = $APP->apptheme_path.'/'.$APP->apptheme_name.'/header.html'; ?>
-<?php $this->display( $sHeadTpl ); ?>  
+<?php $headTpl = app()->pathApplicationTheme() . '/' . '/header.html';?>
+<?php $this->display($headTpl, [], '', true);?>
 ```
-
-<p class="tip">效果和上面一样，同样需要定义 header.html。</p>
 
 ## 包含当前主题下的模板文件
 
@@ -63,7 +51,7 @@
 模板编译后的结果：
 
 ``` php
-<?php $this->display( $APP->apptheme_path.'/'.$APP->apptheme_name.'/test.html' ); ?>
+<?php $this->display('test', [], '', true);?>
 ```
 
 ## 包含其他模块的操作模板
@@ -73,15 +61,13 @@
 <include file="模块名:操作名" />  
 ```
 
-模块和操作名之间的分隔符可以自定义，系统默认为 '_'，你可以通过应用配置文件修改 ：
+模块和操作名之间的分隔符可以自定义, 系统默认为 _ , 你可以通过应用配置文件修改
 
 ``` html
 view.controlleraction_depr = '/'  
 ```
 
-如果你在配置文件修改的话，那么模块和操作之间通过文件夹的方式分割，模块是文件夹，操作是每一个文件。同时，为了降低目录深度，系统默认使用 ‘_’，这样子也比较直观。
-
-例如，包含public模块的header操作方法，我们可以在模板文件中使用如下的代码：
+例如，包含 public 模块的 header 操作方法，我们可以在模板文件中使用如下的代码：
 
 ``` html
 <include file="public+header" />  
@@ -90,7 +76,7 @@ view.controlleraction_depr = '/'
 模板编译后的结果：
 
 ``` php
-<?php $this->display( $APP->apptheme_path.'/'.$APP->apptheme_name.'/public_header.html' ); ?>
+<<?php $this->display('public+header', [], '', true);?>
 ```
 
 ## 包含其他模板主题的模块操作模板
@@ -109,27 +95,30 @@ view.controlleraction_depr = '/'
 模板编译后的结果：
 
 ``` php
-<?php $this->display( $APP->apptheme_path.'/'.$APP->apptheme_name.'/blog_view.html' ); ?>
+<?php $this->display('blue@blog+view', [], '', true);?>
 ```
 
 <p class="tip">如果外部模板有所更改，模板引擎会像主模板一样重新编译模板，所以你不用担心子模板是否更新。</p>
 
 ## 函数表达式支持
 
+为了防止 `.` 被解析为 `->`，需要由 `()` 包裹起来，file 内容区的解析规则遵循 if 标签的 condition 特性。
+
+
 ``` html
-<include file="($strPath.'/'.$strName)" />
-<include file="template+tpl('header')" />
+<include file="($path . '/' . $name)" />
+<include file="Template::tpl('header')" />
 <include file="tpl('header')" />
-<include file="$oHello:world('header')" />
+<include file="$hello.world('header')" />
 ```
 
 模板编译后的结果：
 
 ``` php
-<?php $this->display( ($strPath.'/'.$strName) ); ?>
-<?php $this->display( template::tpl('header') ); ?>
-<?php $this->display( tpl('header') ); ?>
-<?php $this->display( $oHello->world('header') ); ?>
+<?php $this->display(($path . '/' . $name), [], '', true);?>
+<?php $this->display(Template::tpl('header'), [], '', true);?>
+<?php $this->display(tpl('header'), [], '', true);?>
+<?php $this->display($hello->world('header'), [], '', true);?>
 ```
 
 ## 默认文件文件查找
@@ -140,7 +129,7 @@ view.controlleraction_depr = '/'
 <include file="blue@blog+view" />   
 ```
 
-<p class="tip">如果 blue 主题下面没有 blog_view.html，那么系统会自动去寻找 default 目录下面的主题。</p>
+<p class="tip">如果 blue 主题下面没有 blog_view.html，那么系统会自动去寻找 default 目录下面的主题。如果还是没有找到会尝试从扩展主题中查找文件。</p>
 
 自定义扩展主题例子，修改配置文件：
 

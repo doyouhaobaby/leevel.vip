@@ -24,7 +24,23 @@ $this->assign('name', '欢迎使用 QueryPHP !');
 <?php echo $name;?>
 ```
 
-<p class="tip">模板标签的“{”和“$”之间不能有任何的空格，否则标签无效。</p>
+<p class="tip">模板标签的 “{” 和 “$” 之间不能有任何的空格，否则标签无效。</p>
+
+## JS 风格变量
+
+模板
+
+```
+{{ value }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo $name;?>
+```
+
+> 注意：“{{“ 与内容之间可以有空格,也可以没有，结果一样。
 
 ## 输出一个数组
 
@@ -49,6 +65,20 @@ html
 
 ``` php
 我的梦想是写好”<?php echo $value['name'];?>“，我相信”<?php echo $value['description'];?>“。
+```
+
+## JS 风格输出一个数组
+
+html 
+
+```
+{{ value['test'] }}
+```
+
+模板编译后的结果就是：
+
+``` php
+<?php echo $value['test'];?>
 ```
 
 ## 输出一个对象
@@ -82,16 +112,36 @@ html
 我的梦想是写好”<?php echo $demo->name;?>“，我相信”<?php echo $demo->description;?>“。 
 ```
 
-## 无限级支持
+## JS 风格输出一个对象
+
+其中 `.` 是一个非常特殊的语法，如果中间没有空格将被解析为对象连接符，否则就是字符串链接符。
+
+html
 
 ``` html
-我的梦想是写好”{$demo->name>->child->child->child}“，我相信”{$demo->description}“。
+{{ a.b }}
+{{ a . b }}
+{{ a->b }}
 ```
 
 模板编译后的结果：
 
 ``` php
-我的梦想是写好”<?php echo $demo->name>->child->child->child;?>“，我相信”<?php echo $demo->description;?>“。
+<?php echo $a->b;?>
+<?php echo $a . $b;?>
+<?php echo $a->b;?>
+```
+
+## 无限级支持
+
+``` html
+我的梦想是写好”{$demo->name->child->child->child}“，我相信”{$demo->description}“。
+```
+
+模板编译后的结果：
+
+``` php
+我的梦想是写好”<?php echo $demo->name->child->child->child;?>“，我相信”<?php echo $demo->description;?>“。
 ```
 
 ## 对象点语法支持
@@ -176,6 +226,56 @@ html
 
 ``` php
 <?php echo $value3.'start - '.$value.$value2.'- end';?>
+```
+
+## JS 风格运算符
+
+JS 风格的运算符也遵循这一个规则，需要注意的 `.` 语法有一定特殊性，周围是否有空格会影响到解析为 `->` 或者 `.`。
+
+例 1：
+
+```
+{{ value+value2 }}
+{{ value-value2 }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo $value+$value2;?>
+<?php echo $value-$value2;?>
+```
+
+例 2：
+
+```
+{{ value + 9 +10 }}
+{{ value * value2 * 10 }}
+{{ value / value2 }}
+{{ value3+list['key'] }}
+{{ value3%list['key'] }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo $value + 9 +10;?>
+<?php echo $value * $value2 * 10;?>
+<?php echo $value / $value2;?>
+<?php echo $value3+$list['key'];?>
+<?php echo $value3%$list['key'];?>
+```
+
+例 3：
+
+```
+{{ value3.'start - '. value. value2.'end' }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo $value3.'start - '. $value. $value2.'end';?>
 ```
 
 ## 函数支持
@@ -336,6 +436,60 @@ html
 
 ```
 Hello world!
+```
+
+## JS 风格函数支持
+
+JS 风格函数和上面的函数支持得差不多。
+
+### 例 1：
+
+```
+{{ var|escape }}
+{{ var|e }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo escape($var);?>
+<?php echo e($var);?>
+```
+
+### 例 2：
+
+```
+{{ list|join=',' }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo join($list, ',');?>
+```
+
+### 例 3：
+
+```
+{{ data|convert_encoding='iso-2022-jp', 'UTF-8') }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo convert_encoding($data, 'iso-2022-jp', 'UTF-8'));?>
+```
+
+### 例 4：
+
+```
+{{ data|convert_encoding='iso-2022-jp', **, 'UTF-8') }}
+```
+
+模板编译后的结果：
+
+``` php
+<?php echo convert_encoding('iso-2022-jp', $data, 'UTF-8'));?>
 ```
 
 ## 对象方法
