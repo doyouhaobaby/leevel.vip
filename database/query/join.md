@@ -39,9 +39,9 @@ getAll();
 # SELECT `test`.*,`hello`.`name`,`hello`.`value` FROM `test` INNER JOIN `hello` ON (`hello`.`id` < 5 AND `hello`.`name` LIKE 'hello')
 database::table('test')->
 
-join('hello', 'name,value', function($select) {
+join('hello', 'name,value', function ($select) {
     $select->where('id', '<', 5)->where('name', 'like', 'hello');
-} )->
+}s)->
 
 getAll();
 ```

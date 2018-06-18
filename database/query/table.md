@@ -1,6 +1,5 @@
 # 查询语言.table
 
-
 ## 函数原型
 
 ``` php
@@ -20,7 +19,7 @@ database::table('mydb.posts')->
 
 getAll();
 
-# SELECT `p`.* FROM `mydb`.`posts`  `p`
+# SELECT `p`.* FROM `mydb`.`posts` `p`
 database::table(['p' => 'mydb.posts'])->
 
 getAll();

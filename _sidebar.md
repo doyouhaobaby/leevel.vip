@@ -20,7 +20,7 @@
   * [Tagself 保护标签](template/tagself.md)
 
 * database
-  
+
   * [数据库](database/index.md)
   * [查询语言](database/query.md)
     * [流程控制](database/query/flow.md)
@@ -30,3 +30,4 @@
     * [forceIndex](database/query/forceIndex.md)
     * [bind](database/query/bind.md)
     * [join](database/query/join.md)
+    * [orderBy](database/query/orderby.md)
