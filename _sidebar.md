@@ -36,3 +36,4 @@
     * [having](database/query/having.md)
     * [distinct](database/query/distinct.md)
     * [aggregate](database/query/aggregate.md)
+    * [limit](database/query/limit.md)
