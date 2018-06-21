@@ -22,8 +22,14 @@
 * database
 
   * [数据库](database/index.md)
+  * [查](database/read.md)
+    * [get](database/read/get.md)
+    * [getAll](database/read/getall.md)
+    * [getOne](database/read/getone.md)
+    * [select](database/read/select.md)
   * [查询语言](database/query.md)
-    * [流程控制](database/query/flow.md)
+    * [flow](database/query/flow.md)
+    * [sql](database/query/sql.md)
     * [table](database/query/table.md)
     * [where](database/query/where.md)
     * [prefix](database/query/prefix.md)
@@ -37,3 +43,6 @@
     * [distinct](database/query/distinct.md)
     * [aggregate](database/query/aggregate.md)
     * [limit](database/query/limit.md)
+    * [forUpdate](database/query/forupdate.md)
+    * [columns](database/query/columns.md)
+    * [reset](database/query/reset.md)
