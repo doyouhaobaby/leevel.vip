@@ -10,7 +10,7 @@ public function ignoreIndex($mixIndex);
 ## 用法如下
 
 ``` php
-# SELECT `test`.* FROM `test` FORCE INDEX ( nameindex,statusindex ) IGNORE INDEX ( testindex ) WHERE `test`.`id` = 5
+# SELECT `test`.* FROM `test` FORCE INDEX (nameindex,statusindex) IGNORE INDEX (testindex) WHERE `test`.`id` = 5
 database::table('test')->
 
 forceIndex('nameindex,statusindex')->
