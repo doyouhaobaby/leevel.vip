@@ -22,6 +22,11 @@
 * database
 
   * [数据库](database/index.md)
+  * [改](database/update.md)
+    * [update](database/update/update.md)
+    * [updateColumn](database/update/updatecolumn.md)
+    * [updateIncrease](database/update/updateincrease.md)
+    * [updateDecrease](database/update/updatedecrease.md)
   * [查](database/read.md)
     * [aggregate](database/read/aggregate.md)
     * [get](database/read/get.md)
