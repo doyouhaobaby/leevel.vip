@@ -22,6 +22,9 @@
 * database
 
   * [数据库](database/index.md)
+  * [增](database/create.md)
+    * [insert](database/create/insert.md)
+    * [insertAll](database/create/insertAll.md)
   * [改](database/update.md)
     * [update](database/update/update.md)
     * [updateColumn](database/update/updatecolumn.md)
