@@ -19,13 +19,13 @@ If 条件是最基本流程控制语句，这个在任何地方都是相当的�
 模板编译后的结果：
 
 ``` php
-<?php if ($id==1):?>
+<?php if ($id==1): ?>
     我的值为1，我为if下的内容。
-<?php elseif ($id==2):?>
+<?php elseif ($id==2): ?>
     我的值为2，我为elseif下的内容。
-<?php else:?>
-    我的值为<?php echo $id;?>，我不是谁的谁！
-<?php endif;?>
+<?php else: ?>
+    我的值为<?php echo $id; ?>，我不是谁的谁！
+<?php endif; ?>
 ```
 
 ## code 特殊符号替换解析
@@ -45,13 +45,13 @@ If 条件是最基本流程控制语句，这个在任何地方都是相当的�
 模板编译后的结果：
 
 ``` php
-<?php if ($a->name == 1):?>
+<?php if ($a->name == 1): ?>
     a
-<?php endif;?>
+<?php endif; ?>
 
-<?php if (hello::run() == 1):?>
+<?php if (hello::run() == 1): ?>
     b
-<?php endif;?>
+<?php endif; ?>
 ```
 
 ## node
@@ -91,10 +91,10 @@ If 条件是最基本流程控制语句，这个在任何地方都是相当的�
 模板编译后的结果：
 
 ``` php
-<?php if (($id == 1) OR ($id > 100)):?>one
-    <?php elseif ($id == 2):?>two?
-    <?php else:?>other?
-<?php endif;?>
+<?php if (($id == 1) OR ($id > 100)): ?>one
+    <?php elseif ($id == 2): ?>two?
+    <?php else: ?>other?
+<?php endif; ?>
 ```
 
 <p class="tip">node 版本 的 condition 条件区的解析规则遵循 code 版本 if 标签的 condition 特性。</p>
@@ -116,13 +116,13 @@ If 条件是最基本流程控制语句，这个在任何地方都是相当的�
 模板编译后的结果：
 
 ``` php
-<?php if ($a->name == 1):?>
+<?php if ($a->name == 1): ?>
     one
-<?php endif;?>
+<?php endif; ?>
 
-<?php if (hello::run() == 1):?>
+<?php if (hello::run() == 1): ?>
     two
-<?php endif;?>
+<?php endif; ?>
 ```
 
 <p class="tip">elseif 也适用本规则，非常方便。</p>
@@ -144,11 +144,11 @@ c
 模板编译后的结果：
 
 ``` php
-<?php if (length($users) > 0):?>
+<?php if (length($users) > 0): ?>
 a
-<?php elseif ($foo->bar > 0):?>
+<?php elseif ($foo->bar > 0): ?>
 b
-<?php else:?>
+<?php else: ?>
 c
-<?php endif;?>
+<?php endif; ?>
 ```

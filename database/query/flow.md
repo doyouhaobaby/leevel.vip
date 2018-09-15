@@ -33,7 +33,7 @@ Array
 
 $id = 2;
 
-database::table('test')->
+Db::table('test')->
 
 ifs($id == 1)->where('id', 1)->
 
@@ -71,7 +71,7 @@ array (
 
 $id = 2;
 
-database::table('test')->
+Db::table('test')->
 
 ifs($id == 1)->where('id', 1)->
 

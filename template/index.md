@@ -51,9 +51,9 @@ QueryPHP 模板引擎技术来自于 Jecat,一款无与伦比的技术大餐，�
 如果你不习惯使用使用内置的模板引擎，你也可以完全使用 PHP 自生来写。
 
 ``` php
-<?php if($name == 'You'):?>
+<?php if ($name == 'You'): ?>
     欢迎进入 QueryPHP 开发者世界！
-<?php endif;?>
+<?php endif; ?>
 ```
 
 ## 扩展支持

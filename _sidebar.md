@@ -25,6 +25,8 @@
   * [增](database/create.md)
     * [insert](database/create/insert.md)
     * [insertAll](database/create/insertall.md)
+  * [删除](database/create.md)
+    * [delete](database/delete/delete.md)
   * [改](database/update.md)
     * [update](database/update/update.md)
     * [updateColumn](database/update/updatecolumn.md)
@@ -58,3 +60,4 @@
     * [forUpdate](database/query/forupdate.md)
     * [columns](database/query/columns.md)
     * [reset](database/query/reset.md)
+  * [truncate](database/truncate.md)

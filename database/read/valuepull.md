@@ -13,12 +13,12 @@ public function pull($strField, $bFlag = false); // 别名
 
 ``` php
 # SELECT `test`.`id` FROM `test` LIMIT 1
-database::table('test')->
+Db::table('test')->
 
 value('id');
 
 # SELECT `test`.`id` FROM `test` LIMIT 1
-database::table('test')->
+Db::table('test')->
 
 pull('id');
 ```

@@ -30,7 +30,7 @@ Array
 */
 $data = ['name' => '小鸭子', 'value' => '吃饭饭'];
 
-database::table('test')->
+Db::table('test')->
 
 insert($data);
 ```
@@ -57,7 +57,7 @@ Array
 */
 $data = ['name' => '小鸭子', 'value' => '[?]'];
 
-database::table('test')->
+Db::table('test')->
 
 insert($data, ['吃肉']);
 
@@ -75,7 +75,7 @@ Array
 */
 $data = ['name' => '小鸭子', 'value' => '[:value]'];
 
-database::table('test')->
+Db::table('test')->
 
 insert($data, ['value' => '呱呱呱']);
 ```
@@ -102,7 +102,7 @@ Array
 */
 $data = ['name' => '小鸭子', 'value' => '[?]'];
 
-database::table('test')->
+Db::table('test')->
 
 bind(['吃鱼'])->
 
@@ -126,7 +126,7 @@ Array
 */
 $data = ['name' => '小鸭子', 'value' => '[:value]'];
 
-database::table('test')->
+Db::table('test')->
 
 insert($data, ['value' => '呱呱呱'], true);
 ```

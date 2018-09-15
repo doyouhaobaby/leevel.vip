@@ -13,9 +13,9 @@ list 标签也是用于循环输出，解析后的本质为 foreach，同时 for
 模板编译后的结果：
 
 ``` php
-<?php if (is_array($list)): foreach($list as $key => $value):?>
-    <?php echo $key;?> - <?php echo $value;?>
-<?php endforeach; endif;?>
+<?php if (is_array($list)): foreach ($list as $key => $value): ?>
+    <?php echo $key; ?> - <?php echo $value; ?>
+<?php endforeach; endif; ?>
 ```
 
 ## code 省略键值
@@ -30,9 +30,9 @@ list 标签也是用于循环输出，解析后的本质为 foreach，同时 for
 模板编译后的结果：
 
 ``` php
-<?php if (is_array($list)): foreach($list as $value):?>
-    <?php echo $value;?>
-<?php endforeach; endif;?>
+<?php if (is_array($list)): foreach ($list as $value): ?>
+    <?php echo $value; ?>
+<?php endforeach; endif; ?>
 ```
 
 ## node
@@ -46,11 +46,11 @@ list 标签也是用于循环输出，解析后的本质为 foreach，同时 for
 模板编译后的结果：
 
 ``` php
-<?php $my_index = 1;?>
-<?php if (is_array($list)): foreach ($list as $my_key => $my_value):?>
-    <?php echo $my_index;?> <?php echo $my_key;?> <?php echo $my_value;?>
-<?php $my_index++;?>
-<?php endforeach; endif;?>
+<?php $my_index = 1; ?>
+<?php if (is_array($list)): foreach ($list as $my_key => $my_value): ?>
+    <?php echo $my_index; ?> <?php echo $my_key; ?> <?php echo $my_value; ?>
+<?php $my_index++; ?>
+<?php endforeach; endif; ?>
 ```
 
 ## node 省略键值
@@ -66,9 +66,9 @@ list 标签也是用于循环输出，解析后的本质为 foreach，同时 for
 模板编译后的结果：
 
 ``` php
-<?php $index = 1;?>
-<?php if (is_array($list)): foreach ($list as $key => $value):?>
-    <?php echo $index;?> <?php echo $key;?> <?php echo $value;?>
-<?php $index++;?>
-<?php endforeach; endif;?>
+<?php $index = 1; ?>
+<?php if (is_array($list)): foreach ($list as $key => $value): ?>
+    <?php echo $index; ?> <?php echo $key; ?> <?php echo $value; ?>
+<?php $index++; ?>
+<?php endforeach; endif; ?>
 ```

@@ -32,7 +32,7 @@ array (
   ),
 )
  */
-database::table('test')->
+Db::table('test')->
 
 bind('id', 1)->
 
@@ -63,7 +63,7 @@ array (
   ),
 )
  */
-database::table('test')->
+Db::table('test')->
 
 bind('id', 1, PDO::PARAM_INT)->
 
@@ -94,7 +94,7 @@ array (
   ),
 )
  */
-database::table('test')->
+Db::table('test')->
 
 bind('id', [1, PDO::PARAM_INT])->
 
@@ -130,7 +130,7 @@ array (
   ),
 )
 */
-database::table('test')->
+Db::table('test')->
 
 bind(['id' => [1, \PDO::PARAM_INT], 'name'=>'小鸭子'])->
 
@@ -168,7 +168,7 @@ array (
   ),
 )
 */
-database::table('test')->
+Db::table('test')->
 
 bind([[5, PDO::PARAM_INT], '小鸭子'])->
 

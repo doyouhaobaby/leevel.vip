@@ -10,12 +10,12 @@ public function getOne($bFlag = false);
 
 ``` php
 # SELECT `test`.* FROM `test` LIMIT 1
-database::table('test')->
+Db::table('test')->
 
 getOne();
 
 # SELECT `test`.* FROM `test` LIMIT 1
-database::table('test')->
+Db::table('test')->
 
 one()->
 

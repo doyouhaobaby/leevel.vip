@@ -9,7 +9,7 @@
 public function columns($mixCols = '*', $strTable = null);
 
 # SELECT `test`.*,`test`.`id`,`test`.`name`,`test`.`value` FROM `test`
-database::table('test')->
+Db::table('test')->
 
 columns('id')->
 
@@ -27,7 +27,7 @@ getAll();
 public function setColumns($mixCols = '*', $strTable = null);
 
 # SELECT `test`.`remark` FROM `test`
-database::table('test')->
+Db::table('test')->
 
 columns('id')->
 

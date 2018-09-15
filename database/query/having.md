@@ -12,7 +12,7 @@ having 和 where 用法一致，只是没有 where exists 这种写法。
 
 ``` php
 # SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`tid`  HAVING `test`.`tid` > 5
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 groupBy('tid')->
 
@@ -25,7 +25,7 @@ getAll();
 
 ``` php
 # SELECT `test`.`name` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`name` LIKE '技术'
-database::table('test', 'name as id,tname as value')->
+Db::table('test', 'name as id,tname as value')->
 
 groupBy('name')->
 
@@ -38,7 +38,7 @@ getAll();
 
 ``` php
 # SELECT `test`.`name` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`name` LIKE '技术' OR `test`.`tname` LIKE '技术'
-database::table('test', 'name as id,tname as value')->
+Db::table('test', 'name as id,tname as value')->
 
 groupBy('name')->
 
@@ -53,7 +53,7 @@ getAll();
 
 ``` php
 # SELECT `test`.`name` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`id` BETWEEN 1 AND 10 AND `test`.`id` BETWEEN 1 AND 100
-database::table('test', 'name as id,tname as value')->
+Db::table('test', 'name as id,tname as value')->
 
 groupBy('name')->
 
@@ -70,7 +70,7 @@ getAll();
 
 ``` php
 # SELECT `test`.`name` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`name` BETWEEN 1 AND 100 AND `test`.`tname` BETWEEN 5 AND 22
-database::table('test', 'name as id,tname as value')->
+Db::table('test', 'name as id,tname as value')->
 
 groupBy('name')->
 
@@ -86,7 +86,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`id` NOT BETWEEN 1 AND 10 AND `test`.`id` NOT BETWEEN 1 AND 100
-database::table('test')->
+Db::table('test')->
 
 groupBy('name')->
 
@@ -101,7 +101,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`id` IN (2,50) AND `test`.`num` IN (2,50) 
-database::table('test')->
+Db::table('test')->
 
 groupBy('name')->
 
@@ -116,7 +116,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`id` NOT IN (2,50) AND `test`.`num` NOT IN (2,50)
-database::table('test')->
+Db::table('test')->
 
 groupBy('name')->
 
@@ -131,7 +131,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`id` IS NULL AND `test`.`num` IS NULL
-database::table('test')->
+Db::table('test')->
 
 groupBy('name')->
 
@@ -146,7 +146,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`name`  HAVING `test`.`id` IS NOT NULL AND `test`.`num` IS NOT NULL
-database::table('test')->
+Db::table('test')->
 
 groupBy('name')->
 
@@ -161,7 +161,7 @@ getAll();
 
 ``` php
 # SELECT `test`.* FROM `test` GROUP BY `test`.`name` HAVING `test`.`id` LIKE '123' AND `test`.`num` LIKE '55'
-database::table('test')->
+Db::table('test')->
 
 groupBy('name')->
 
@@ -176,7 +176,7 @@ getAll();
 
 ``` php
 # SELECT `test`.* FROM `test` GROUP BY `test`.`name` HAVING `test`.`id` NOT LIKE '123' AND `test`.`num` NOT LIKE '55'
-database::table('test')->
+Db::table('test')->
 
 groupBy('name')->
 
@@ -195,7 +195,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`id`  HAVING `test`.`id` = 5 OR (`test`.`votes` > 100 AND `test`.`title` <> 'Admin')
-database::table('test')->
+Db::table('test')->
 
 groupBy('id')->
 
@@ -214,7 +214,7 @@ getAll();
 
 ``` php
 # SELECT `test`.`post`,`test`.`value`,concat("tt_",`test`.`id`)  FROM `test`  GROUP BY `test`.`id`  HAVING concat("hello_",`test`.`posts`) = `test`.`id`
-database::table('test', 'post,value,{concat("tt_",[id])}')->
+Db::table('test', 'post,value,{concat("tt_",[id])}')->
 
 groupBy('id')->
 
@@ -227,7 +227,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`id`  HAVING `test`.`id` = '故事' AND `test`.`name` IN (1,2,3) AND `test`.`weidao` BETWEEN '40' AND '100' AND `test`.`value` IS NULL AND `test`.`remark` IS NOT NULL AND `test`.`goods` = '东亚商品' AND `test`.`hello` = 'world'
-database::table('test')->
+Db::table('test')->
 
 groupBy('id')->
 
@@ -248,7 +248,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`id`  HAVING `test`.`name` = 11 and `post`.`value` = 22 and concat("tt_",`test`.`id`)
-database::table('test')->
+Db::table('test')->
 
 groupBy('id')->
 
@@ -263,7 +263,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`id`  HAVING `test`.`hello` = 'world' OR (`test`.`id` LIKE '你好')
-database::table('test')->
+Db::table('test')->
 
 groupBy('id')->
 
@@ -277,7 +277,7 @@ having(
 getAll();
 
 # SELECT `test`.*  FROM `test`  GROUP BY `test`.`id`  HAVING `test`.`hello` = '111' OR (`test`.`id` LIKE '你好' AND `test`.`value` = 'helloworld') AND (`test`.`id` LIKE '你好' OR `test`.`value` = 'helloworld' OR (`test`.`child_one` > '123' AND `test`.`child_two` LIKE '123'))
-database::table('test')->
+Db::table('test')->
 
 groupBy('id')->
 

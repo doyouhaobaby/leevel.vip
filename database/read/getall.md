@@ -10,12 +10,12 @@ public function getAll($bFlag = false);
 
 ``` php
 # SELECT `test`.* FROM `test` 
-database::table('test')->
+Db::table('test')->
 
 getAll();
 
 # SELECT `test`.* FROM `test`
-database::table('test')->
+Db::table('test')->
 
 all()->
 

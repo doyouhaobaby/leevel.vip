@@ -14,8 +14,8 @@ assign 标签也是用于页面快捷赋值，这个还是用起来比较方便�
 模板编译后的结果：
 
 ``` php
-<?php $helloWorld='say hello to the world';?>
-<?php $test->hello='hello';?>
+<?php $helloWorld = 'say hello to the world'; ?>
+<?php $test->hello = 'hello'; ?>
 ```
 
 ## JS 风格版本
@@ -30,6 +30,6 @@ assign 标签也是用于页面快捷赋值，这个还是用起来比较方便�
 模板编译后的结果：
 
 ``` php
-<?php $foo = 'foo';?>
-<?php $hello = $hello . 'foo';?>
+<?php $foo = 'foo'; ?>
+<?php $hello = $hello . 'foo'; ?>
 ```

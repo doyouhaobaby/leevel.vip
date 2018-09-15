@@ -17,10 +17,10 @@ SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`
  UNION SELECT id,value FROM test2
  UNION SELECT `yyyyy`.`yid` AS `id`,`yyyyy`.`name` AS `value`  FROM `yyyyy`  WHERE `yyyyy`.`first_name` = '222' 
 */
-$union1 = database::table('yyyyy', 'yid as id,name as value')->where('first_name', '=', '222');
+$union1 = Db::table('yyyyy', 'yid as id,name as value')->where('first_name', '=', '222');
 $union2 = 'SELECT id,value FROM test2';
 
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 union($union1)->
 
@@ -34,7 +34,7 @@ getAll();
 等价数组写法
 
 ```
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 union([$union1, $union2, $union1])->
 
@@ -53,7 +53,7 @@ SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`
 
 $union1 = 'SELECT id,value FROM test2';
 
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 unionAll($union1)->
 

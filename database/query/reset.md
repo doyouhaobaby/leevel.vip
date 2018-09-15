@@ -10,7 +10,7 @@ public function reset($sOption = null);
 
 ``` php
 # SELECT `newtable`.*  FROM `newtable`  WHERE `newtable`.`new` = 'world'
-database::table('test')->
+Db::table('test')->
 
 where('id', '=', 5)->
 
@@ -25,7 +25,7 @@ where('new', '=', 'world')->
 getAll();
     
 # SELECT `test`.*  FROM `test`  WHERE `test`.`new` LIKE 'new'
-database::table('test')->
+Db::table('test')->
 
 where('id', '=', 5)->
 

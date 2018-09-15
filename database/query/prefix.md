@@ -10,7 +10,7 @@ public function prefix($mixPrefix);
 
 ``` php
 # SELECT SQL_CALC_FOUND_ROWS `test`.* FROM `test` WHERE `test`.`id` = 5
-database::table('test')->
+Db::table('test')->
 
 prefix('SQL_CALC_FOUND_ROWS')->
 
@@ -19,7 +19,7 @@ where('id', '=', 5)->
 getAll();
     
 # SELECT SQL_NO_CACHE `test`.* FROM `test` WHERE `test`.`id` = 5
-database::table('test')->
+Db::table('test')->
 
 prefix('SQL_NO_CACHE')->
 

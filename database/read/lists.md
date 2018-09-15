@@ -12,22 +12,22 @@ public function lists($mixFieldValue, $strFieldKey = null, $bFlag = false);
 
 ``` php
 # SELECT `test`.`name` FROM `test`
-database::table('test')->
+Db::table('test')->
 
 lists('name');
 
 # SELECT `test`.`name`,`test`.`id` FROM `test`
-database::table('test')->
+Db::table('test')->
 
 lists('name,id');
 
 # SELECT `test`.`name`,`test`.`id` FROM `test`
-database::table('test')->
+Db::table('test')->
 
 lists('name', 'id');
 
 # SELECT `test`.`name`,`test`.`id` FROM `test`
-database::table('test')->
+Db::table('test')->
 
 lists(['name', 'id']);
 ```

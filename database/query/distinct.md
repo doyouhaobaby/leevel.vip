@@ -10,7 +10,7 @@ public function distinct($bFlag = true);
 
 ``` php
 # SELECT DISTINCT `test`.*  FROM `test`
-database::table('test')->
+Db::table('test')->
 
 distinct()->
 
@@ -21,7 +21,7 @@ OR
 
 ``` php
 # SELECT `test`.*  FROM `test`
-database::table('test')->
+Db::table('test')->
 
 distinct()->
 

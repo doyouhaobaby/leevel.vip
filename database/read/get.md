@@ -10,12 +10,12 @@ public function get($nNum = null, $bFlag = false);
 
 ```
 # SELECT `test`.* FROM `test
-database::table('test')->
+Db::table('test')->
 
 get();
 
 # SELECT `test`.* FROM `test` LIMIT 0,5
-database::table('test')->
+Db::table('test')->
 
 get(5);
 ```

@@ -71,7 +71,7 @@ $data = [
     ['name' => '小鸭子4', 'value' => '呱呱呱4'],
 ];
 
-database::table('test')->
+Db::table('test')->
 
 insertAll($data);
 ```
@@ -139,7 +139,7 @@ $data = [
     ['name' => '小鸭子4', 'value' => '[?]'],
 ];
 
-database::table('test')->
+Db::table('test')->
 
 insertAll($data, ['吃肉1', '吃肉2']);
 
@@ -194,7 +194,7 @@ $data = [
     ['name' => '小鸭子4', 'value' => '[:world]'],
 ];
 
-database::table('test')->
+Db::table('test')->
 
 insertAll($data, ['hello' => 'hello 吃肉', 'world' => 'world 喝汤']);
 ```
@@ -262,7 +262,7 @@ $data = [
     ['name' => '小鸭子4', 'value' => '[?]'],
 ];
 
-database::table('test')->
+Db::table('test')->
 
 bind(['吃鱼', '吃肉'])->
 
@@ -332,7 +332,7 @@ $data = [
     ['name' => '小鸭子4', 'value' => '[?]'],
 ];
 
-database::table('test')->
+Db::table('test')->
 
 bind(['吃鱼', '吃肉'])->
 

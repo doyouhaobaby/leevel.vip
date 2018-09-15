@@ -17,7 +17,7 @@ Array
 (
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', 503)->
 
@@ -34,7 +34,7 @@ Array
     [0] => 503
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', '[?]')->
 

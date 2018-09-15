@@ -23,13 +23,13 @@ lists 标签主要用于在模板中循环输出数据集或者多维数组。
     else:
         foreach ($tmp as $key => $vo):
             ++$index;
-            $mod = $index % 2;?>
-    <?php echo $vo->title;?>  <?php echo $vo->people;?>
+            $mod = $index % 2; ?>
+    <?php echo $vo->title; ?>  <?php echo $vo->people; ?>
         <?php endforeach;
     endif;
 else:
     echo "";
-endif;?>
+endif; ?>
 ```
 
 <p class="tip">list 标签的 **name** 属性表示模板赋值的变量名称，因此不可随意在模板文件中改变。**id** 表示当前的循环变量，可以随意指定，但确保不要和 name 属性冲突。</p>
@@ -55,13 +55,13 @@ endif;?>
     else:
         foreach ($tmp as $key => $vo):
             ++$index;
-            $mod = $index % 2;?>
-    <?php echo $vo->title;?> <?php echo $vo->people;?>
+            $mod = $index % 2; ?>
+    <?php echo $vo->title; ?> <?php echo $vo->people; ?>
         <?php endforeach;
     endif;
 else:
     echo "";
-endif;?>
+endif; ?>
 ```
 
 ## 输出偶数记录
@@ -70,9 +70,9 @@ lists 还支持按偶数输出，例如，我们在模板中写下如下的代�
 
 ``` html
 <lists name="list" id="vo" mod="2">
-    <?php if ($mod == 1):?>
+    <?php if ($mod == 1): ?>
         {$vo.title} {$vo.people}
-    <?php endif;?>
+    <?php endif; ?>
 </lists>
 ```
 
@@ -87,15 +87,15 @@ lists 还支持按偶数输出，例如，我们在模板中写下如下的代�
     else:
         foreach ($tmp as $key => $vo):
             ++$index;
-            $mod = $index % 2;?>
-    <?php if ($mod == 1):?>
-        <?php echo $vo->title;?> <?php echo $vo->people;?>
-    <?php endif;?>
+            $mod = $index % 2; ?>
+    <?php if ($mod == 1): ?>
+        <?php echo $vo->title; ?> <?php echo $vo->people; ?>
+    <?php endif; ?>
         <?php endforeach;
     endif;
 else:
     echo "";
-endif;?>
+endif; ?>
 ```
 
 ## 输出奇数记录
@@ -104,7 +104,7 @@ lists 还支持奇数记录的输出：
 
 ``` html
 <lists name="arrList" id="arrVo" mod="2">
-    <?php if ( $mod == 0 ) :?>
+    <?php if ($mod == 0) : ?>
         {$arrVo.title} {$arrVo.people}
     <?php endif; ?>
 </lists>
@@ -121,15 +121,15 @@ lists 还支持奇数记录的输出：
     else:
         foreach ($tmp as $key => $vo):
             ++$index;
-            $mod = $index % 2;?>
-    <?php if ($mod == 0):?>
-        <?php echo $vo->title;?> <?php echo $vo->people;?>
-    <?php endif;?>
+            $mod = $index % 2; ?>
+    <?php if ($mod == 0): ?>
+        <?php echo $vo->title; ?> <?php echo $vo->people; ?>
+    <?php endif; ?>
         <?php endforeach;
     endif;
 else:
     echo "";
-endif;?>
+endif; ?>
 ```
 
 <p class="tip">奇数记录和偶数记录规定如下，我们以数组的 0 为开始，0、2、4为偶记录，其它的都为基数记录。</p>
@@ -158,16 +158,16 @@ mod 属性还用于控制一定记录的换行，例如：
     else:
         foreach ($tmp as $key => $vo):
             ++$index;
-            $mod = $index % 2;?>
-    <?php echo $vo->title;?> <?php echo $vo->people;?>
-    <?php if ($mod == 0):?>
+            $mod = $index % 2; ?>
+    <?php echo $vo->title; ?> <?php echo $vo->people; ?>
+    <?php if ($mod == 0): ?>
         <br>
-    <?php endif;?>
+    <?php endif; ?>
         <?php endforeach;
     endif;
 else:
     echo "";
-endif;?>
+endif; ?>
 ```
 
 ## 输出循环变量
@@ -191,13 +191,13 @@ endif;?>
     else:
         foreach ($tmp as $key => $vo):
             ++$k;
-            $mod = $k % 2;?>
-    <?php echo $k;?> <?php echo $vo->people;?>
+            $mod = $k % 2; ?>
+    <?php echo $k; ?> <?php echo $vo->people; ?>
         <?php endforeach;
     endif;
 else:
     echo "";
-endif;?>
+endif; ?>
 ```
 
 ## 输出数组的索引 
@@ -223,13 +223,13 @@ endif;?>
     else:
         foreach ($tmp as $key => $vo):
             ++$index;
-            $mod = $index % 2;?>
-    key: <?php echo $key;?>
+            $mod = $index % 2; ?>
+    key: <?php echo $key; ?>
         <?php endforeach;
     endif;
 else:
     echo "";
-endif;?>
+endif; ?>
 ```
 
 <p class="tip">大家看到没有，索引从 0 开始，而不是从 1 开始，这个是数组原始索引。</p>

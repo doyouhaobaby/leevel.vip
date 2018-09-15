@@ -10,7 +10,7 @@ public function forUpdate($bFlag = true);
 
 ``` php
 # SELECT `test`.*  FROM `test` FOR UPDATE
-database::table('test')->
+Db::table('test')->
 
 forUpdate()->
 
@@ -21,7 +21,7 @@ Or
 
 ``` php
 # SELECT `test`.*  FROM `test`
-database::table('test')->
+Db::table('test')->
 
 forUpdate()->
 

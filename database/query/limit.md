@@ -7,7 +7,7 @@
 public function limit($nOffset = 0, $nCount = 30);
 
 # SELECT `test`.*  FROM `test` LIMIT 5,10 
-database::table('test')->
+Db::table('test')->
 
 limit(5, 10)->
 
@@ -21,7 +21,7 @@ get();
 public function one();
 
 # SELECT `test`.*  FROM `test` LIMIT 1 
-database::table('test')->
+Db::table('test')->
 
 one()->
 
@@ -35,7 +35,7 @@ get();
 public function all();
 
 # SELECT `test`.*  FROM `test` 
-database::table('test')->
+Db::table('test')->
 
 all()->
 
@@ -49,7 +49,7 @@ get();
 public function top($nCount = 30);
 
 # SELECT `test`.*  FROM `test` LIMIT 0,15
-database::table('test')->
+Db::table('test')->
 
 top(15)->
 

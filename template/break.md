@@ -18,14 +18,14 @@ break 和 continue 是各种循环中非常重要的两个流程标记语言，�
 模板编译后的结果：
 
 ``` php
-<?php $index = 1;?>
-<?php if (is_array($list)): foreach ($list as $key => $value):?>
-   <?php if ($value == 'H'):?>
-       <?php break;?>
-   <?php endif;?>
-   <?php echo $value;?>
-<?php $index++;?>
-<?php endforeach; endif;?>
+<?php $index = 1; ?>
+<?php if (is_array($list)): foreach ($list as $key => $value): ?>
+   <?php if ($value == 'H'): ?>
+       <?php break; ?>
+   <?php endif; ?>
+   <?php echo $value; ?>
+<?php $index++; ?>
+<?php endforeach; endif; ?>
 ```
 
 ## continue 标签
@@ -44,12 +44,12 @@ break 和 continue 是各种循环中非常重要的两个流程标记语言，�
 模板编译后的结果：
 
 ``` php
-<?php $index = 1;?>
-<?php if (is_array($list)): foreach ($list as $key => $value):?>
-   <?php if ($value == 'H'):?>
-       <?php continue;?>
-   <?php endif;?>
-   <?php echo $value;?>
-<?php $index++;?>
-<?php endforeach; endif;?>
+<?php $index = 1; ?>
+<?php if (is_array($list)): foreach ($list as $key => $value): ?>
+   <?php if ($value == 'H'): ?>
+       <?php continue; ?>
+   <?php endif; ?>
+   <?php echo $value; ?>
+<?php $index++; ?>
+<?php endforeach; endif; ?>
 ```

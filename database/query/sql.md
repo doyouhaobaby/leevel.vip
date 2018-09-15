@@ -27,7 +27,7 @@ Array
         )
 )
 */
-database::table('test')->
+Db::table('test')->
 
 sql(true)->
 
@@ -45,12 +45,12 @@ Array
         )
 )
 */
-database::sql(true)->
+Db::sql(true)->
 
 delete('delete from test where id = ?', [22]);
 
 // 等效
-database::delete('delete from test where id = ?', [22], true);
+Db::delete('delete from test where id = ?', [22], true);
 ```
 
 # 例外 getOne 等也支持快捷
@@ -73,7 +73,7 @@ Array
 
 )
 */
-database::table('test')->
+Db::table('test')->
 
 latest()->
 

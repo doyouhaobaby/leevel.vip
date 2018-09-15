@@ -10,14 +10,14 @@ public function join($mixTable, $mixCols = '*', $mixCond /* args */);
 
 ``` php
 # SELECT `test`.*,`hello`.`name`,`hello`.`value` FROM `test` INNER JOIN `hello` ON `test`.`name` = '小牛'
-database::table('test')->
+Db::table('test')->
 
 join('hello', 'name,value', 'name', '=', '小牛')->
 
 getAll();
 
 # SELECT `test`.*,`t`.`name` AS `nikename`,`t`.`value` AS `tt` FROM `test` INNER JOIN `hello`  `t` ON `test`.`name` = '小牛' 
-database::table('test')->
+Db::table('test')->
 
 join(['t' => 'hello'], ['name as nikename', 'tt' => 'value'], 'name', '=', '小牛')->
 
@@ -30,14 +30,14 @@ getAll();
 
 ``` php
 # SELECT `test`.*,`hello`.`name`,`hello`.`value` FROM `test` INNER JOIN `hello` ON `test`.`hello` = 'world' AND `test`.`test` > `test`.`name`
-database::table('test')->
+Db::table('test')->
 
 join('hello', 'name,value', ['hello' => 'world', ['test', '>', '{[name]}']])->
 
 getAll();
 
 # SELECT `test`.*,`hello`.`name`,`hello`.`value` FROM `test` INNER JOIN `hello` ON (`hello`.`id` < 5 AND `hello`.`name` LIKE 'hello')
-database::table('test')->
+Db::table('test')->
 
 join('hello', 'name,value', function ($select) {
     $select->where('id', '<', 5)->where('name', 'like', 'hello');
@@ -50,7 +50,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*,`t`.`name` AS `nikename`,`t`.`value` AS `tt` FROM `test` INNER JOIN `hello`  `t` ON `t`.`name` = '小牛'
-database::table('test')->
+Db::table('test')->
 
 innerJoin(['t' => 'hello'], ['name as nikename', 'tt' => 'value'], 'name', '=', '小牛')->
 
@@ -61,7 +61,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*,`t`.`name` AS `nikename`,`t`.`value` AS `tt` FROM `test` LEFT JOIN `hello`  `t` ON `t`.`name` = '小牛'
-database::table('test')->
+Db::table('test')->
 
 innerJoin(['t' => 'hello'], ['name as nikename', 'tt' => 'value'], 'name', '=', '小牛')->
 
@@ -72,7 +72,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*,`t`.`name` AS `nikename`,`t`.`value` AS `tt` FROM `test` RIGHT JOIN `hello`  `t` ON `t`.`name` = '小牛'
-database::table('test')->
+Db::table('test')->
 
 rightJoin(['t' => 'hello'], ['name as nikename', 'tt' => 'value'], 'name', '=', '小牛')->
 
@@ -83,7 +83,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*,`t`.`name` AS `nikename`,`t`.`value` AS `tt` FROM `test` FULL JOIN `hello`  `t` ON `t`.`name` = '小牛'
-database::table('test')->
+Db::table('test')->
 
 fullJoin(['t' => 'hello'], ['name as nikename', 'tt' => 'value'], 'name', '=', '小牛')->
 
@@ -96,7 +96,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*,`t`.`name` AS `nikename`,`t`.`value` AS `tt` FROM `test` CROSS JOIN `hello`  `t`
-database::table('test')->
+Db::table('test')->
 
 crossJoin(['t' => 'hello'], ['name as nikename', 'tt' => 'value'])->
 
@@ -109,7 +109,7 @@ getAll();
 
 ``` php
 # SELECT `test`.*,`t`.`name` AS `nikename`,`t`.`value` AS `tt` FROM `test` NATURAL JOIN `hello`  `t`
-database::table('test')->
+Db::table('test')->
 
 naturalJoin(['t' => 'hello'], ['name as nikename', 'tt' => 'value'])->
 

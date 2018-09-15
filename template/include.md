@@ -19,7 +19,7 @@
 模板编译后的结果：
 
 ``` php
-<?php $this->display('application/app/ui/theme/default/header', [], '.html', true);?>
+<?php $this->display('application/app/ui/theme/default/header', [], '.html', true); ?>
 ```
 
 ## 使用变量定义完整的文件
@@ -32,8 +32,8 @@
 模板编译后的结果：
 
 ``` php
-<?php $headTpl = app()->pathApplicationTheme() . '/' . '/header.html';?>
-<?php $this->display($headTpl, [], '', true);?>
+<?php $headTpl = app()->pathApplicationTheme() . '/' . '/header.html'; ?>
+<?php $this->display($headTpl, [], '', true); ?>
 ```
 
 ## 包含当前主题下的模板文件
@@ -51,7 +51,7 @@
 模板编译后的结果：
 
 ``` php
-<?php $this->display('test', [], '', true);?>
+<?php $this->display('test', [], '', true); ?>
 ```
 
 ## 包含其他模块的操作模板
@@ -76,7 +76,7 @@ view.controlleraction_depr = '/'
 模板编译后的结果：
 
 ``` php
-<<?php $this->display('public+header', [], '', true);?>
+<<?php $this->display('public+header', [], '', true); ?>
 ```
 
 ## 包含其他模板主题的模块操作模板
@@ -95,7 +95,7 @@ view.controlleraction_depr = '/'
 模板编译后的结果：
 
 ``` php
-<?php $this->display('blue@blog+view', [], '', true);?>
+<?php $this->display('blue@blog+view', [], '', true); ?>
 ```
 
 <p class="tip">如果外部模板有所更改，模板引擎会像主模板一样重新编译模板，所以你不用担心子模板是否更新。</p>
@@ -115,10 +115,10 @@ view.controlleraction_depr = '/'
 模板编译后的结果：
 
 ``` php
-<?php $this->display(($path . '/' . $name), [], '', true);?>
-<?php $this->display(Template::tpl('header'), [], '', true);?>
-<?php $this->display(tpl('header'), [], '', true);?>
-<?php $this->display($hello->world('header'), [], '', true);?>
+<?php $this->display(($path . '/' . $name), [], '', true); ?>
+<?php $this->display(Template::tpl('header'), [], '', true); ?>
+<?php $this->display(tpl('header'), [], '', true); ?>
+<?php $this->display($hello->world('header'), [], '', true); ?>
 ```
 
 ## 默认文件文件查找

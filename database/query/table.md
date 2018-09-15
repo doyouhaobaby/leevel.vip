@@ -10,17 +10,17 @@ public function table($mixTable, $mixCols = '*');
 
 ``` php
 # SELECT `posts`.* FROM `posts`
-database::table('posts')->
+Db::table('posts')->
 
 getAll();
 
 # SELECT `posts`.* FROM `mydb`.`posts`
-database::table('mydb.posts')->
+Db::table('mydb.posts')->
 
 getAll();
 
 # SELECT `p`.* FROM `mydb`.`posts` `p`
-database::table(['p' => 'mydb.posts'])->
+Db::table(['p' => 'mydb.posts'])->
 
 getAll();
 ```
@@ -29,10 +29,10 @@ getAll();
 
 ``` php
 # SELECT `posts`.`title`,`posts`.`body` FROM `posts` 
-database::table('posts','title,body')->getAll();
+Db::table('posts','title,body')->getAll();
 
 # SELECT `posts`.`title` AS `t`,`posts`.`name`,`posts`.`remark`,`posts`.`value`  FROM `mydb`.`posts`
-database::table(
+Db::table(
     'mydb.posts',
     ['t'=> 'title','name','remark,value']
 )->

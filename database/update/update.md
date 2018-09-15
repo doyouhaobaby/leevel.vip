@@ -21,7 +21,7 @@ public function update($mixData, $arrBind = [], $bFlag = false);
         )
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', 503)->
 
@@ -41,7 +41,7 @@ update(['name' => '小猪']);
         )
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', 503)->
 
@@ -63,7 +63,7 @@ update(['name' => '小猪']);
         )
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', 503)->
 
@@ -85,7 +85,7 @@ update(['name' => '小猪']);
         )
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', 503)->
 
@@ -107,7 +107,7 @@ update(['name' => '小猪']);
         )
 )
 */
-database::table('test as t')->
+Db::table('test as t')->
 
 join('hello as h', '', 't.id', '=', '{[size]}')->
 
@@ -131,7 +131,7 @@ update(['name' => '小猪']);
     [hello] => hello world!
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', 503)->
 
@@ -156,7 +156,7 @@ update(
 (
 )
 */
-database::table('test')->
+Db::table('test')->
 
 where('id', 503)->
 

@@ -20,7 +20,7 @@ Array
 
 )
 */
-database::table('test')->
+Db::table('test')->
 
 select('select *from test where id = ?', [1]);
 ```
@@ -44,7 +44,7 @@ Array
         )
 )
 */
-database::table('test')->
+Db::table('test')->
 
 select();
 ```
@@ -95,9 +95,9 @@ Array
         )
 )
 */
-$select = database::table('test')->
+$select = Db::table('test')->
 
 where('id', 5);
 
-database::select($select);
+Db::select($select);
 ```

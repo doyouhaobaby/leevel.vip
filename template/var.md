@@ -21,7 +21,7 @@ $this->assign('name', '欢迎使用 QueryPHP !');
 模板编译后的结果：
 
 ``` php
-<?php echo $name;?>
+<?php echo $name; ?>
 ```
 
 <p class="tip">模板标签的 “{” 和 “$” 之间不能有任何的空格，否则标签无效。</p>
@@ -37,7 +37,7 @@ $this->assign('name', '欢迎使用 QueryPHP !');
 模板编译后的结果：
 
 ``` php
-<?php echo $name;?>
+<?php echo $name; ?>
 ```
 
 > 注意：“{{“ 与内容之间可以有空格,也可以没有，结果一样。
@@ -64,7 +64,7 @@ html
 模板编译后的结果就是：
 
 ``` php
-我的梦想是写好”<?php echo $value['name'];?>“，我相信”<?php echo $value['description'];?>“。
+我的梦想是写好”<?php echo $value['name']; ?>“，我相信”<?php echo $value['description']; ?>“。
 ```
 
 ## JS 风格输出一个数组
@@ -78,7 +78,7 @@ html
 模板编译后的结果就是：
 
 ``` php
-<?php echo $value['test'];?>
+<?php echo $value['test']; ?>
 ```
 
 ## 输出一个对象
@@ -109,7 +109,7 @@ html
 模板编译后的结果：
 
 ``` php
-我的梦想是写好”<?php echo $demo->name;?>“，我相信”<?php echo $demo->description;?>“。 
+我的梦想是写好”<?php echo $demo->name; ?>“，我相信”<?php echo $demo->description; ?>“。 
 ```
 
 ## JS 风格输出一个对象
@@ -127,9 +127,9 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo $a->b;?>
-<?php echo $a . $b;?>
-<?php echo $a->b;?>
+<?php echo $a->b; ?>
+<?php echo $a . $b; ?>
+<?php echo $a->b; ?>
 ```
 
 ## 无限级支持
@@ -141,7 +141,7 @@ html
 模板编译后的结果：
 
 ``` php
-我的梦想是写好”<?php echo $demo->name->child->child->child;?>“，我相信”<?php echo $demo->description;?>“。
+我的梦想是写好”<?php echo $demo->name->child->child->child; ?>“，我相信”<?php echo $demo->description; ?>“。
 ```
 
 ## 对象点语法支持
@@ -155,7 +155,7 @@ html
 模板编译后的结果：
 
 ``` php
-我的梦想是写好”<?php echo $demo->name;?>“，我相信”<?php echo $demo->description;?>“。
+我的梦想是写好”<?php echo $demo->name; ?>“，我相信”<?php echo $demo->description; ?>“。
 ```
 
 <p class="tip">值得注意的是点语法不支持数组，这个需要明确。</p>
@@ -169,7 +169,7 @@ html
 模板编译后的结果：
 
 ``` php
-我的梦想是写好”<?php echo $demo->name->one->two->three->four;?>“，我相信”<?php echo $demo->description->one->two->three->four;?>“。
+我的梦想是写好”<?php echo $demo->name->one->two->three->four; ?>“，我相信”<?php echo $demo->description->one->two->three->four; ?>“。
 ```
 
 ## 运算符
@@ -188,8 +188,8 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo $value+$value2;?>
-<?php echo $value-$value2;?>
+<?php echo $value+$value2; ?>
+<?php echo $value-$value2; ?>
 ```
 
 ### 变量之间的乘除余数
@@ -207,11 +207,11 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo $value + 9 +10;?>
-<?php echo $value * $value2 * 10;?>
-<?php echo $value / $value2;?>
-<?php echo $value3+$list['key'];?>
-<?php echo $value3%$list['key'];?>
+<?php echo $value + 9 +10; ?>
+<?php echo $value * $value2 * 10; ?>
+<?php echo $value / $value2; ?>
+<?php echo $value3+$list['key']; ?>
+<?php echo $value3%$list['key']; ?>
 ```
 
 ### 变量之间的连接字符
@@ -225,7 +225,7 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo $value3.'start - '.$value.$value2.'- end';?>
+<?php echo $value3.'start - '.$value.$value2.'- end'; ?>
 ```
 
 ## JS 风格运算符
@@ -242,8 +242,8 @@ JS 风格的运算符也遵循这一个规则，需要注意的 `.` 语法有一
 模板编译后的结果：
 
 ``` php
-<?php echo $value+$value2;?>
-<?php echo $value-$value2;?>
+<?php echo $value+$value2; ?>
+<?php echo $value-$value2; ?>
 ```
 
 例 2：
@@ -259,11 +259,11 @@ JS 风格的运算符也遵循这一个规则，需要注意的 `.` 语法有一
 模板编译后的结果：
 
 ``` php
-<?php echo $value + 9 +10;?>
-<?php echo $value * $value2 * 10;?>
-<?php echo $value / $value2;?>
-<?php echo $value3+$list['key'];?>
-<?php echo $value3%$list['key'];?>
+<?php echo $value + 9 +10; ?>
+<?php echo $value * $value2 * 10; ?>
+<?php echo $value / $value2; ?>
+<?php echo $value3+$list['key']; ?>
+<?php echo $value3%$list['key']; ?>
 ```
 
 例 3：
@@ -275,7 +275,7 @@ JS 风格的运算符也遵循这一个规则，需要注意的 `.` 语法有一
 模板编译后的结果：
 
 ``` php
-<?php echo $value3.'start - '. $value. $value2.'end';?>
+<?php echo $value3.'start - '. $value. $value2.'end'; ?>
 ```
 
 ## 函数支持
@@ -297,7 +297,7 @@ JS 风格的运算符也遵循这一个规则，需要注意的 `.` 语法有一
 模板编译后的结果：
 
 ``` php
-<?php echo function2(arg1,arg2,function1($varName));?>
+<?php echo function2(arg1,arg2,function1($varName)); ?>
 ```
 
 模板中如果不加 ** 的格式为：
@@ -309,7 +309,7 @@ JS 风格的运算符也遵循这一个规则，需要注意的 `.` 语法有一
 模板编译后的结果：
 
 ``` php
-<?php echo function2(function1($varName), arg1,arg2);?>
+<?php echo function2(function1($varName), arg1,arg2); ?>
 ```
 
 ### 基本用法
@@ -334,7 +334,7 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo substr(strtoupper($content), 0,3);?>
+<?php echo substr(strtoupper($content), 0,3); ?>
 ```
 
 程序最后运行结果为： 
@@ -365,7 +365,7 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo date("Y-m-d",$date);?>
+<?php echo date("Y-m-d",$date); ?>
 ```
 
 函数的使用没有个数限制，可以随意使用。
@@ -383,7 +383,7 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo function1($var);?>
+<?php echo function1($var); ?>
 ```
 
 #### 使用静态函数来格式化参数
@@ -398,8 +398,8 @@ html
 模板编译后的结果：
 
 ``` php
-<?php $currentTime=time();?>
-<?php echo \Leevel\Support\Str::smartDate($currentTime);?>
+<?php $currentTime=time(); ?>
+<?php echo \Leevel\Support\Str::smartDate($currentTime); ?>
 ```
 
 程序运行结果如下：
@@ -417,7 +417,7 @@ html
 模板编译后的结果：
 
 ``` php
-<?php function1($var);?>
+<?php function1($var); ?>
 ```
 
 接下来，我们在模板写下如下的代码：
@@ -429,7 +429,7 @@ html
 模板编译后的结果：
 
 ``` php
-<?php echo('Hello world!');?>
+<?php echo('Hello world!'); ?>
 ```
 
 程序最后运行结果为：
@@ -452,8 +452,8 @@ JS 风格函数和上面的函数支持得差不多。
 模板编译后的结果：
 
 ``` php
-<?php echo escape($var);?>
-<?php echo e($var);?>
+<?php echo escape($var); ?>
+<?php echo e($var); ?>
 ```
 
 ### 例 2：
@@ -465,7 +465,7 @@ JS 风格函数和上面的函数支持得差不多。
 模板编译后的结果：
 
 ``` php
-<?php echo join($list, ',');?>
+<?php echo join($list, ','); ?>
 ```
 
 ### 例 3：
@@ -477,7 +477,7 @@ JS 风格函数和上面的函数支持得差不多。
 模板编译后的结果：
 
 ``` php
-<?php echo convert_encoding($data, 'iso-2022-jp', 'UTF-8'));?>
+<?php echo convert_encoding($data, 'iso-2022-jp', 'UTF-8')); ?>
 ```
 
 ### 例 4：
@@ -489,7 +489,7 @@ JS 风格函数和上面的函数支持得差不多。
 模板编译后的结果：
 
 ``` php
-<?php echo convert_encoding('iso-2022-jp', $data, 'UTF-8'));?>
+<?php echo convert_encoding('iso-2022-jp', $data, 'UTF-8')); ?>
 ```
 
 ## 对象方法
@@ -505,7 +505,7 @@ JS 风格函数和上面的函数支持得差不多。
 模板编译后的结果：
 
 ``` php
-<?php echo $demo->test();?>
+<?php echo $demo->test(); ?>
 ```
 
 <p class="tip">程序编译后默认是输出值，所以最好在类的方法中最好不要直接输出值，直接返回，这样可以交给模版来做数据处理。</p>
@@ -531,11 +531,11 @@ JS 风格函数和上面的函数支持得差不多。
 模板编译后的结果：
 
 ``` php
-<?php $name='';?>
-<?php echo $name ?: "Hello，我最爱的雪碧！";?>
+<?php $name=''; ?>
+<?php echo $name ?: "Hello，我最爱的雪碧！"; ?>
 
-<?php $name='肯德基更配！';?>
-<?php echo $name ?: "Hello，我最爱的雪碧！";?>
+<?php $name='肯德基更配！'; ?>
+<?php echo $name ?: "Hello，我最爱的雪碧！"; ?>
 ```
 
 程序运行结果如下：

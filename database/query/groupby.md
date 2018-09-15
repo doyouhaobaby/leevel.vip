@@ -12,7 +12,7 @@ public function order($mixExpr);
 
 ``` php
 # SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`id`,`test`.`name`
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 groupBy('id')->
 
@@ -21,28 +21,28 @@ groupBy('name')->
 getAll();
     
 # SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `post`.`id`
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 groupBy('post.id')->
 
 getAll();
 
 # SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY SUM(`test`.`num`) 
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 groupBy('{SUM([num])}')->
 
 getAll();
    
 # SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`title`,`test`.`id`,concat('1234',`test`.`id`,'ttt')
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 groupBy("title,id,{concat('1234',[id],'ttt')}")->
 
 getAll();
     
 # SELECT `test`.`tid` AS `id`,`test`.`tname` AS `value`  FROM `test`  GROUP BY `test`.`title`,`test`.`id`,`test`.`ttt`,`test`.`value`
-database::table('test', 'tid as id,tname as value')->
+Db::table('test', 'tid as id,tname as value')->
 
 groupBy(['title,id,ttt', 'value'])->
 
